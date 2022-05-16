@@ -30,6 +30,7 @@ public class Target : MonoBehaviour
             .GetComponent<GameManager>();
     }
 
+
     private void OnMouseDown()
     {
         if (gameManager.isGameActive)
@@ -37,10 +38,6 @@ public class Target : MonoBehaviour
             Destroy(gameObject);
             gameManager.UpdateScore(pointValue);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-        }
-            
-        {
-
         }
     }
 
